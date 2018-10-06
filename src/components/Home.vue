@@ -3,39 +3,32 @@
     <b-jumbotron header="Student Cards">
 
         <div>
-  <b-btn v-b-toggle.collapse1 variant="primary">Show</b-btn>
-  <b-collapse id="collapse1" class="mt-2">
-    <b-card>
-      <div class="d-flex justify-content-center align-items-center">
-    <b-card-group rows>
-        <b-card title="นฤนาฏ คุณาธรรม" img-src="https://i.imgur.com/7Nwfzp2.jpg" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-            <p class="card-text">
-                5835512010<br>
-                
-            </p>
-            <b-button href="https://www.facebook.com/narunart.kunatham" variant="primary">Facebook</b-button>
-        </b-card>
-        <b-card title="อนงค์นาท ไฝขาว" img-src="https://i.imgur.com/pM9DUSD.jpg" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-            <p class="card-text">
-                5835512036
-            </p>
-            <b-button href="https://www.facebook.com/gramma.nano" variant="primary">Facebook</b-button>
-        </b-card>
-        <b-card title="ทศพล ใจดี" img-src="https://i.imgur.com/ORrtv4N.jpg" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-            <p class="card-text">
-                5835512103
-            </p>
-            <b-button href="https://www.facebook.com/j.tossapol" variant="primary">Facebook</b-button>
-        </b-card>
-    </b-card-group>
-</div>
-    </b-card>
-  </b-collapse>
-</div>
-    </b-jumbotron>
-    
 
-    <b-button v-on:click="logout" variant="warning">Logout</b-button>
+            <b-card>
+                <div class="d-flex justify-content-center align-items-center">
+                    <b-card-group rows>
+                        <div>
+                            <h3>ยินดีต้อนรับเข้าสู่เว็บ Student Cards</h3><br>
+                            <p>เป็นรูปแบบการแสดงผลชื่อนักเรียนในรูปของ Card</p><br>
+                            <span>Example: </span>
+
+                            <b-card title="อนงค์นาท ไฝขาว" img-src="https://i.imgur.com/pM9DUSD.jpg" img-alt="Image" 
+                            img-top tag="article" style="width: 30" class="mb-2">
+                                <p class="card-text">
+                                    5835512036
+                                </p>
+                                <b-button href="https://www.facebook.com/gramma.nano" variant="primary">Facebook</b-button>
+                            </b-card>
+                        </div>
+                    </b-card-group>
+                </div>
+            </b-card>
+
+        </div>
+        <b-button v-on:click="logout" variant="warning">Logout</b-button>
+    </b-jumbotron>
+
+    
 </div>
 </template>
 
@@ -44,11 +37,6 @@ import firebase from 'firebase'
 
 export default {
     name: 'Home',
-    data() {
-        return {
-            msg: 'Welcome to Student List !'
-        }
-    },
     methods: {
         logout: function () {
             firebase.auth().signOut().then(() => {

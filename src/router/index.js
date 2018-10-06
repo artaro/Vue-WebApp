@@ -6,6 +6,7 @@ import Login from '../components/Login.vue'
 import SignUp from '../components/SignUp.vue'
 import firebase from 'firebase'
 import BootstrapVue from 'bootstrap-vue'
+import About from '../components/About.vue'
 
 Vue.use(BootstrapVue);
 
@@ -32,6 +33,14 @@ let router = new Router({
       path: '/home',
       name: 'Home',
       component: Home,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About,
       meta: {
         requiresAuth: true
       }

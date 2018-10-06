@@ -7,10 +7,8 @@
         <span><router-link to="/"> Got an account ? Sign in here !</router-link></span>
     </div>
 </template>
-
 <script>
 import firebase from 'firebase'
-
 export default {
     name: 'signUp',
     data: function() {
@@ -34,7 +32,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 .sign-up{
     margin-top: 50px;
@@ -57,6 +54,5 @@ span {
     margin-top: 20px;
     font-size: 11px;
 }
-
 </style>
 
