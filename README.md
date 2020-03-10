@@ -1,6 +1,7 @@
 # vue-firebase-tutorial
 
-> A Vue.js project
+> A Vue.js project <br/>
+Youtube : https://youtu.be/q2en3zg2t4E
 
 ## Build Setup
 
